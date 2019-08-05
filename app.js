@@ -16,4 +16,4 @@ app.get('/api/courses/:id', (req,res) => {
    if(!course) res.status(404).send('The course with the given ID was not found.')//404 not found
    res.send(course);
 });
-app.listen(8081)
+app.listen(process.env.PORT || 8081)
